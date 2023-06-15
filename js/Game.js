@@ -32,6 +32,11 @@ class Game {
 
         this.activePhrase = this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
+
+        document.body.style.backgroundColor = 'maroon';
+        
+
+
     }
     getRandomPhrase() {
         const randomIndex = Math.floor(Math.random() * this.phrases.length);
@@ -95,18 +100,33 @@ class Game {
         if(gameWon) {
             gameOverMessage.textContent = 'Congratulations!! You Win!';
             overlay.className ='win';
+            overlay.style.backgroundColor = '#78CF82';
         } else {
-            gameOverMessage.textContent = 'So Sorry, better luck next time!';
+            gameOverMessage.textContent = 'Sorry, better luck next time! Lets pay again!!' ;
             overlay.className ='lose';
+            overlay.style.backgroundColor = '#f5785f';
         }
 
         if(overlayButton) {
         overlayButton.addEventListener('click', () => {
            this.startGame();
            overlay.style.display = 'none';
+           overlay.body.style.backgroundColor = '';
         });
       }
     }
 }
 
-/**truble with the random phrase, restarting the game buttonons showing and not showing */
+/**truble with the random phrase, restarting the game buttonons showing and not showing
+ * 
+ * why wont className work?? /checForWin
+ * i was having truble with className/ classList. incluced() 
+ * used .contains() instead of .includes().  includes() returns true if a STRING contains a specfic string.
+ * contains() method returns true if a node is a descendant of given node. Or if the element contains the className then the method returns ture.
+ * For contains()  at javascripttutorial.net/developer.mozilla.org for examples./w3schools/includes()
+ * developer.mozilla.org/for element: classList property.
+ * geekflare.com/tic-tac-toe game example.
+ * stackoverflow.com/stopping game and checking/displaying winnner. 
+ * when i set backgound overlay need to go back in and change oberlay.style back to green/red when lose or win. 
+ */
+  //document.body.style.backgroundImage = 'linear-gradient(to right, maroon, green, blue, yellow)';
