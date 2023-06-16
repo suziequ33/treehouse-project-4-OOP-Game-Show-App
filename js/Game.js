@@ -35,8 +35,6 @@ class Game {
 
         document.body.style.backgroundColor = 'maroon';
         
-
-
     }
     getRandomPhrase() {
         const randomIndex = Math.floor(Math.random() * this.phrases.length);
