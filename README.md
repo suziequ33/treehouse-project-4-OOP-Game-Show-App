@@ -1,5 +1,7 @@
 # treehouse-project-4-OOP-Game-Show-App
  My 4th treehouse project
+Created a browser-based, word guessing game: "Phrase Hunter". Use JavaScript and OOP (Object-Oriented Programming) to select random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard.
+ 
 For changing the styles in this project i did the background in the overlay to black.
 and in the body i changed it to maroon. i did try to four different color in the background and found you could do 
 a gradient backgound. but with the four colors it looked more like a rainbow then what i wanted.
